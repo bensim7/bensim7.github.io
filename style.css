@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Rocker&display=swap");
+
+#whiteBoard,
+#blackBoard {
+  display: block;
+  clear: both;
+  width: 100%;
+  min-height: 240px;
+}
+
+#playArea {
+  display: block;
+  width: 100%;
+  min-height: 300px;
+}
+
+#blackBoard {
+  background-color: black;
+  border-style: double;
+  border-color: white;
+  border-width: 5px;
+  margin: 10px 0px 10px 0px;
+}
+
+#whiteBoard {
+  background-color: white;
+  border-style: double;
+  border-color: black;
+  border-width: 5px;
+  margin: 10px 0px 10px 0px;
+}
+
+/* body {
+  background-color: rgb(29, 29, 167);
+} */
+
+body {
+  background-image: url("desert.jpg");
+  background-size: cover;
+  font-family: "Helvetica";
+}
+
+h3 {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px black;
+}
+h3.playArea {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px black;
+}
+
+#playArea h4 {
+  color: white;
+  display: inline;
+}
+
+img#deckBack {
+  width: 120px;
+  height: 150px;
+  display: block;
+  margin-left: 20px;
+}
+
+button {
+  /* display: block; */
+  height: 50px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* #wcard1,
+#wcard2,
+#wcard3,
+#wcard4,
+#wcard5,
+#wcard6,
+#wcard7,
+#bcard1,
+#bcard2,
+#bcard3,
+#bcard4,
+#bcard5,
+#bcard6,
+#bcard7 {
+  box-sizing: border-box;
+  width: 150px;
+  height: 214px;
+  margin: 10px;
+  float: left;
+  background-color: white;
+  background-image: url("cardback.jpg"); 
+  background-position-x: 0px;
+  background-position-y: center;
+  background-repeat: none;
+  background-position: middle center;
+  border: 1px #555555 solid;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 3px 0px #000000;
+  box-shadow: 2px 2px 3px 0px #000000;
+} 
+
+*/
+
+#card1,
+#card2,
+#card3,
+#card4,
+#card5,
+#card6,
+#card7,
+#card8,
+#card9,
+#card10,
+#card11,
+#card12,
+#card13,
+#card14 {
+  box-sizing: border-box;
+  width: 150px;
+  height: 220px;
+  margin: 10px;
+  float: left;
+  background-color: white;
+  background-image: url("cardback.jpg");
+  background-position-x: 0px;
+  background-position-y: center;
+  background-repeat: none;
+  background-position: middle center;
+  border: 1px #555555 solid;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 3px 0px #000000;
+  box-shadow: 2px 2px 3px 0px #000000;
+}
+
+HR {
+  margin-top: 15px;
+  display: block;
+  width: 100%;
+}
+
+img {
+  width: 150px;
+  height: 210px;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(191, 249, 222);
+  font-family: "New Rocker", cursive;
+  text-shadow: 3px 3px black;
+}
