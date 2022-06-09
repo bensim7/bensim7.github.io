@@ -84,7 +84,7 @@ button {
   margin: 10px;
   float: left;
   background-color: white;
-  background-image: url("cardback.jpg");
+  background-image: url("cardarea.jpg");
   background-position-x: 0px;
   background-position-y: center;
   background-repeat: none;
@@ -101,7 +101,7 @@ HR {
 
 img {
   width: 150px;
-  height: 210px;
+  height: 212px;
 }
 
 h1 {
