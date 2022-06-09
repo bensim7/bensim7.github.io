@@ -44,10 +44,6 @@ h3 {
   color: rgb(255, 255, 255);
   text-shadow: 2px 2px black;
 }
-h3.playArea {
-  color: rgb(255, 255, 255);
-  text-shadow: 2px 2px black;
-}
 
 #playArea h4 {
   color: white;
@@ -62,45 +58,11 @@ img#deckBack {
 }
 
 button {
-  /* display: block; */
   height: 50px;
   margin-bottom: 15px;
   margin-left: 20px;
   margin-right: 20px;
 }
-
-/* #wcard1,
-#wcard2,
-#wcard3,
-#wcard4,
-#wcard5,
-#wcard6,
-#wcard7,
-#bcard1,
-#bcard2,
-#bcard3,
-#bcard4,
-#bcard5,
-#bcard6,
-#bcard7 {
-  box-sizing: border-box;
-  width: 150px;
-  height: 214px;
-  margin: 10px;
-  float: left;
-  background-color: white;
-  background-image: url("cardback.jpg"); 
-  background-position-x: 0px;
-  background-position-y: center;
-  background-repeat: none;
-  background-position: middle center;
-  border: 1px #555555 solid;
-  border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 3px 0px #000000;
-  box-shadow: 2px 2px 3px 0px #000000;
-} 
-
-*/
 
 #card1,
 #card2,
@@ -127,15 +89,13 @@ button {
   background-position-y: center;
   background-repeat: none;
   background-position: middle center;
-  border: 1px #555555 solid;
+  border: 1px black solid;
   border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 3px 0px #000000;
   box-shadow: 2px 2px 3px 0px #000000;
 }
 
 HR {
-  margin-top: 15px;
-  display: block;
+  margin-top: 16px;
   width: 100%;
 }
 
@@ -146,7 +106,7 @@ img {
 
 h1 {
   text-align: center;
-  color: rgb(191, 249, 222);
+  color: white;
   font-family: "New Rocker", cursive;
   text-shadow: 3px 3px black;
 }
