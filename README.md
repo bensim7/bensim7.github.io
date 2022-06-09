@@ -27,7 +27,7 @@ When the Comet is found to be in a player's hand when they draw for their turn, 
 
 Rules of the Game:
 
-1. A Deck of 16 cards including 1 Comet card (Total 17 cards) is created at the start of the game.
+1. A Deck of 16 cards including 1 Comet card (Total 17 cards) is created at the start of the game. Each player receives a starting hand of 3 cards from the deck and 1 Dino Angel card from outside the deck.
 
 2. If the Comet is drawn by any Player, they lose the game unless they have A Dino Angel Card.
 
