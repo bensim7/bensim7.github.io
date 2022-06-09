@@ -144,10 +144,10 @@ function whiteCallTheComet() {
   }
 
   if (cometCountWhite > 0) {
-    const cometMessageWhite = document.createElement("h4");
-    messageBox.className = "White_Player_Loses_in_6secs";
+    const cometMessageWhite = document.createElement("h3");
+    messageBox.className = "White_Player_Loses_in_5secs";
     cometMessageWhite.innerText =
-      "--- WHITE PLAYER DREW THE COMET, PLAY A DINO ANGEL WITHIN 6 SECS OR LOSE THE GAME ---";
+      "--- WHITE PLAYER DREW THE COMET, PLAY A DINO ANGEL WITHIN 5 SECS OR LOSE THE GAME ---";
     messageBox.append(cometMessageWhite);
   }
 }
@@ -164,10 +164,10 @@ function blackCallTheComet() {
   }
 
   if (cometCountBlack > 0) {
-    const cometMessageBlack = document.createElement("h4");
-    messageBox.className = "Black_Player_Loses_in_6secs";
+    const cometMessageBlack = document.createElement("h3");
+    messageBox.className = "Black_Player_Loses_in_5secs";
     cometMessageBlack.innerText =
-      "--- BLACK PLAYER DREW THE COMET, PLAY A DINO ANGEL WITHIN 6 SECS OR LOSE THE GAME ---";
+      "--- BLACK PLAYER DREW THE COMET, PLAY A DINO ANGEL WITHIN 5 SECS OR LOSE THE GAME ---";
     messageBox.append(cometMessageBlack);
   }
 }
@@ -201,7 +201,7 @@ function giveWhitePlayerCard() {
   document.getElementById("blackBoard").style.backgroundColor = "black";
 
   whiteCallTheComet();
-  setTimeout(checkWhiteForComet, 6000);
+  setTimeout(checkWhiteForComet, 5000);
 }
 
 const bTurn = document.getElementById("blackPlayerTurn");
@@ -218,7 +218,7 @@ function giveBlackPlayerCard() {
   document.getElementById("whiteBoard").style.backgroundColor = "white";
 
   blackCallTheComet();
-  setTimeout(checkBlackForComet, 6000);
+  setTimeout(checkBlackForComet, 5000);
 }
 
 ///////////////////////////////////////////////////////////////
@@ -226,18 +226,18 @@ function giveBlackPlayerCard() {
 //////////////////////////////////////////////////////////////
 
 function checkWhiteForComet() {
-  if (messageBox.classList.contains("White_Player_Loses_in_6secs")) {
+  if (messageBox.classList.contains("White_Player_Loses_in_5secs")) {
     const wAudio = new Audio("wplayerloses.m4a");
     wAudio.play();
-    alert("6 seconds are up, White Player Loses, Black Player Wins");
+    alert("5 seconds are up, White Player Loses, Black Player Wins");
   }
 }
 
 function checkBlackForComet() {
-  if (messageBox.classList.contains("Black_Player_Loses_in_6secs")) {
+  if (messageBox.classList.contains("Black_Player_Loses_in_5secs")) {
     const bAudio = new Audio("bplayerloses.m4a");
     bAudio.play();
-    alert("6 seconds are up, Black Player Loses, White Player Wins");
+    alert("5 seconds are up, Black Player Loses, White Player Wins");
   }
 }
 

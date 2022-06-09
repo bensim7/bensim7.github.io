@@ -30,10 +30,6 @@
   margin: 10px 0px 10px 0px;
 }
 
-/* body {
-  background-color: rgb(29, 29, 167);
-} */
-
 body {
   background-image: url("desert.jpg");
   background-size: cover;
@@ -45,10 +41,10 @@ h3 {
   text-shadow: 2px 2px black;
 }
 
-#playArea h4 {
+/* #playArea h4 {
   color: white;
   display: inline;
-}
+} */
 
 img#deckBack {
   width: 120px;
