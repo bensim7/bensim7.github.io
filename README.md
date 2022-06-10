@@ -1,5 +1,7 @@
 # bensim7.github.io
 
+---
+
 Comet - Card Game
 
 Comet - Card Game is an original game inspired by an existing card game (where players lose if they draw a specific card and there are save cards that will save the players from the specific card).
@@ -35,6 +37,8 @@ alert statements to show the game rules and if a player won/lost the game.
 Game is created with HTML and CSS pages for the basic user interface first, with the respective divs.
 
 javascript codes used for generating the deck, shuffling and dealing the cards and starting hand.
+
+---
 
 ### Challenges that required Brainstorming
 
@@ -82,6 +86,8 @@ if (carddiv.parentElement.children[c].classList.contains("The_Comet")) {
 });
 
 When the Comet is found to be in a player's hand when they draw for their turn, a function alerts the player that they have drawn it, and also adds a class name to the html. Clicking the Dino Angel will remove this class name, if it is not removed within a specific time, a setTimeout function will trigger a function that checks for this class name after that specific time, and if the class name is there, the player that drew for their turn loses.
+
+---
 
 ### Current unsolved challenges
 
