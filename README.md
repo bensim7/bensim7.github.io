@@ -90,7 +90,8 @@ When the Comet is found to be in a player's hand when they draw for their turn, 
 Currently in the game, when The Comet is drawn depending, on whether the White Player's Turn Button is clicked or the Black Player's Turn Button is clicked
 The Comet will add:
 
-messageBox.className = "White_Player_Loses_in_5secs"; or
+messageBox.className = "White_Player_Loses_in_5secs";
+or
 messageBox.className = "Black_Player_Loses_in_5secs";
 
 to as a class, and a setTimeout function under the respective's players' turn buttons will search for the respective players' class tag above after a specific time to determine if the player has lost (if within 5 seconds of drawing The Comet, the player who drew it did not click on a Dino Angel to clear/remove the class name, a pop up will appear to let the player know they have lost.)
