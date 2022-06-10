@@ -26,16 +26,23 @@ The idea is to have both players in the game display their hands on the board an
 
 5. Players with 6 or more cards in their hand should take an action.
 
-Technologies used
+---
+
+### Technologies used
+
 Javascript - for loop, if-else statements, arrays, setTimeout, alert. DOM to insert classnames, img src and do if-else comparisons, removing of innerHTML and classNames through clicking on event.currentTarget and Event Listeners.
+
 CSS
+
 HTML
+
 console.log - troubleshooting
+
 alert statements to show the game rules and if a player won/lost the game.
 
 Game is created with HTML and CSS pages for the basic user interface first, with the respective divs.
 
-javascript codes used for generating the deck, shuffling and dealing the cards and starting hand.
+Javascript codes used for generating the deck, shuffling and dealing the cards and starting hand.
 
 ---
 
