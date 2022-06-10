@@ -287,7 +287,7 @@ let selectedBlack = "";
 let selectedWhiteRemoval = "";
 let selectedBlackRemoval = "";
 
-for (a = 1; a <= 14; a++) {
+for (let a = 1; a <= 14; a++) {
   const carddiv = document.getElementById("card" + a);
   console.log(carddiv);
 
@@ -297,9 +297,9 @@ for (a = 1; a <= 14; a++) {
 
   // carddiv.className == Dino_Angel works as well
   carddiv.addEventListener("click", function (e) {
-    // console.log("click on angel method: show children array");
-    // console.log(carddiv.parentElement.children);
-    for (c = 0; c < 7; c++) {
+    console.log("click on angel method: show children array");
+    console.log(carddiv.parentElement.children);
+    for (let c = 0; c < 7; c++) {
       if (carddiv.parentElement.children[c].classList.contains("The_Comet")) {
         // if (carddiv.classList.contains("The_Comet")) {
         if (e.currentTarget.className == "Dino_Angel") {

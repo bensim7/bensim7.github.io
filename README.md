@@ -20,7 +20,7 @@ Brainstorming of key logic of the original card such as setting the logic of whe
 
 A Dino Angel card is distributed when there is a matching pair when one Dino beats another. While there are no issues with distributing a card to a static card slot is simple, distributing a card to the first empty card slot required brainstorming, and a for loop searching through an empty innerText="" worked to find the first empty card slot and distribute a card there.
 
-Other Key logic is making 2 matching card disappear from each players' hand when there is match and a stored variable with event.currentTarget to used to store the div of the cards clicked and then empty the innerText and classNames of the divs
+Other Key logic is making 2 matching card disappear from each players' hand when there is a match and a stored variable with event.currentTarget to used to store the div of the cards clicked and then empty the innerText and classNames of the divs
 Also, searching through the player's boards for The Comet card when the next turn draw button is clicked, and for the Dino Angel to only be clickable when there is The Comet found in the player's hand.
 
 When the Comet is found to be in a player's hand when they draw for their turn, a function alerts the player that they have drawn it, and also adds a class name to the html. Clicking the Dino Angel will remove this class name, if it is not removed within a specific time, a setTimeout function will trigger a function that checks for this class name after that specific time, and if the class name is there, the player that drew for their turn loses.
