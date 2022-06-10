@@ -19,7 +19,7 @@ The idea is to have both players in the game display their hands on the board an
 
 ii) If a player accidentally plays a pair where the opponent has the winning Dino, they have spent the turn action to give the opponent a Dino Angel!
 b) Play a Dino Angel Card to save themself from The Comet.
-c) Play Gift card to steal the opponent's Dino Angel.
+c) Clicking a Gift card and an opponent's Dino Angel card as a pair allows a player to take the opponent's Dino Angel.
 
 5. Players with 6 or more cards in their hand should take an action.
 
