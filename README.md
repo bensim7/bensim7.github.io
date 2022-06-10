@@ -1,8 +1,4 @@
-# bensim7.github.io
-
----
-
-Comet - Card Game
+## Comet - Card Game
 
 Comet - Card Game is an original game inspired by an existing card game (where players lose if they draw a specific card and there are save cards that will save the players from the specific card).
 The idea is to have both players in the game display their hands on the board and the game mechanics works with both players showing their hands to each other in mind. Each player can interact with each other's cards to make plays in the game to gain more "save" cards that will protect the player from the specific drawn card.
