@@ -12,14 +12,17 @@ The idea is to have both players in the game display their hands on the board an
 3. When Dino Angel card is clicked when the player has the comet, instead of losing the game, the Dino Angel and Comet disappear from hand and the Comet is reshuffled into the deck.
 
 4. On each player's turn they may take up to one action
-   a) Play a pair of Dino cards (one card from each player, in top down order, click White Player's Board first and then Black Player's Board
-   i) Megasaurus beats Rex beats Rap-Pack beats Megasaurus (The Player with the winning Dino out of the pair gets the Dino Angel)
 
-![Game Rules Image](Comet_game_rules.jpg)
+   - Play a pair of Dino cards (one card from each player, in top down order, click White Player's Board first and then Black Player's Board
 
-ii) If a player accidentally plays a pair where the opponent has the winning Dino, they have spent the turn action to give the opponent a Dino Angel!
-b) Play a Dino Angel Card to save themself from The Comet.
-c) Clicking a Gift card and an opponent's Dino Angel card as a pair allows a player to take the opponent's Dino Angel.
+     - Megasaurus beats Rex beats Rap-Pack beats Megasaurus (The Player with the winning Dino out of the pair gets the Dino Angel)
+
+     - ![Game Rules Image](Comet_game_rules.jpg)
+
+     - If a player accidentally plays a pair where the opponent has the winning Dino, they have spent the turn action to give the opponent a Dino Angel!
+
+   - Play a Dino Angel Card to save themself from The Comet.
+   - Clicking a Gift card and an opponent's Dino Angel card as a pair allows a player to take the opponent's Dino Angel.
 
 5. Players with 6 or more cards in their hand should take an action.
 
