@@ -103,7 +103,7 @@ When the Comet is found to be in a player's hand when they draw for their turn, 
 
    the game automatically discards a card randomly from their card. This is to prevent players with full hands to avoid drawing the Comet with a full hand.
 
-   The message box then shows a message to inform the players of this. The message is cleared from the message box automatically after 3.5 seconds.
+   The message box then shows a message to inform the players. The message is cleared from the message box automatically after 3.5 seconds.
 
 2. **Done in local PC but not commited to Project repository**
 
@@ -113,7 +113,7 @@ When the Comet is found to be in a player's hand when they draw for their turn, 
 
    A player may click on Blue COmet Junior or Green Comet Junior even it is in the by the opoonent hand/board as long as it is their turn.
 
-   The message box then shows a message to inform the players that Comet Junior has cleared both players' cards.
+   The message box then shows a message to inform the players that Comet Junior has cleared both players' cards. The message is cleared from the message box automatically after 3.5 seconds.
 
 3. **In progress, trying to solve**
 
