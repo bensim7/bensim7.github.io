@@ -95,6 +95,32 @@ When the Comet is found to be in a player's hand when they draw for their turn, 
 
 ---
 
+### Work in Progress (Update)
+
+1. **Done in local PC but not commited to Project repositoty**
+   If a player has 7 cards in their hand and their opponent clicks on their turn button (e.g. White player has 7 cards in hand and Black player clicks on their turn button to start the Black player's turn),
+
+   the game automatically discards a card randomly from their card. This is to prevent players with full hands to avoid drawing the Comet with a full hand.
+
+   The message box then shows a message to inform the players of this. The message is cleared from the message box automatically after 3.5 seconds.
+
+2. **Done in local PC but not commited to Project repository**
+   2 additional cards have been added to the game: Blue Comet Junior and Green Comet Junior.
+
+   When either of these 2 cards are by any player, any player may click on Blue Comet Junior or Green Comet Junior during their turn as part of their one action a turn to clear both players' hands.
+
+   A player may click on Blue COmet Junior or Green Comet Junior even it is in the by the opoonent hand/board as long as it is their turn.
+
+   The message box then shows a message to inform the players that Comet Junior has cleared both players' cards.
+
+3. **In progress, trying to solve**
+   Include "Same Dino" Cards.
+   When a player clicks on a Same Dino Cards (trying to implement as either a before or after action), it should allow the player to click on Dinos of the same Type (2 Megasauruses, or 2 Rexes, or 2 Raptor Packs) to gain a Dino Angel.
+
+   This can add more strategy to allow a player to choose a Dino that they would like to remove from their hand or their opponent's hand, so that the opponent has less options to defeat the player's Dino during the opponent's turn.
+
+---
+
 ### Current unsolved challenges
 
 Currently in the game, when The Comet is drawn depending, on whether the White Player's Turn Button is clicked or the Black Player's Turn Button is clicked
