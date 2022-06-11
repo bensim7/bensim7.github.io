@@ -97,7 +97,7 @@ When the Comet is found to be in a player's hand when they draw for their turn, 
 
 ### Work in Progress (Update)
 
-1. Update done in local PC on 11th June, but not commited to Project repository
+1. **Update done in local PC on 11th June, but not commited to Project repository**
 
    If a player has 7 cards in their hand and their opponent clicks on their turn button (e.g. White player has 7 cards in hand and Black player clicks on their turn button to start the Black player's turn),
 
@@ -105,7 +105,7 @@ When the Comet is found to be in a player's hand when they draw for their turn, 
 
    The message box then shows a message to inform the players. The message is cleared from the message box automatically after 3.5 seconds.
 
-2. Update done in local PC on 11th June, but not commited to Project repository
+2. **Update done in local PC on 11th June, but not commited to Project repository**
 
    2 additional cards have been added to the game: Blue Comet Junior card, and Green Comet Junior card.
 
