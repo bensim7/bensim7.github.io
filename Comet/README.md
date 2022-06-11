@@ -123,6 +123,7 @@ When the Comet is found to be in a player's hand when they draw for their turn, 
    This can add more strategy to allow a player to choose a Dino that they would like to remove from their hand or their opponent's hand, so that the opponent has less options to defeat the player's Dino during the opponent's turn.
 
 4. **To-do list**
+
    Add more colors in addition to the current Red, Green, Blue, Yellow colors to increase the number of cards in the deck and increase duration of the game before drawing The Comet card.
 
 ---
