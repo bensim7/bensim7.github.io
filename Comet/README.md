@@ -107,11 +107,11 @@ When the Comet is found to be in a player's hand when they draw for their turn, 
 
 2. **Done in local PC but not commited to Project repository**
 
-   2 additional cards have been added to the game: Blue Comet Junior and Green Comet Junior.
+   2 additional cards have been added to the game: Blue Comet Junior card, and Green Comet Junior card.
 
    When either of these 2 cards are drawn by any player into their hand/board, any player may click on Blue Comet Junior or Green Comet Junior during their turn as part of their one action a turn to clear both players' hands.
 
-   A player may click on Blue COmet Junior or Green Comet Junior even it is in the by the opoonent hand/board as long as it is their turn.
+   A player may click on the Blue Comet Junior card or Green Comet Junior card even it is in the by the opoonent hand/board as long as it is their turn.
 
    The message box then shows a message to inform the players that Comet Junior has cleared both players' cards. The message is cleared from the message box automatically after 3.5 seconds.
 
