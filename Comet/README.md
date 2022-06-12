@@ -97,34 +97,46 @@ When the Comet is found to be in a player's hand when they draw for their turn, 
 
 ### Work in Progress (Update)
 
-1. **Update done in local PC on 11th June, but not commited to Project repository**
+1. **Update done in separate local PC on 11th June, but not commited to Project repository**
 
    If a player has 7 cards in their hand and their opponent clicks on their turn button (e.g. White player has 7 cards in hand and Black player clicks on their turn button to start the Black player's turn),
 
-   the game automatically discards a card randomly from their card. This is to prevent players with full hands to avoid drawing the Comet with a full hand.
+   the game automatically discards a card randomly from their card. This is to prevent players with full hands avoiding drawing the Comet with a full hand.
 
-   The message box then shows a message to inform the players. The message is cleared from the message box automatically after 3.5 seconds.
+   The Play Area's message box then shows a message to inform the players. The message is cleared from the message box automatically after 3.5 seconds.
 
-2. **Update done in local PC on 11th June, but not commited to Project repository**
+2. **Update done in separate local PC on 11th June, but not commited to Project repository**
 
    2 additional cards have been added to the game: Blue Comet Junior card, and Green Comet Junior card.
 
    When either of these 2 cards are drawn by any player into their hand/board, any player may click on Blue Comet Junior or Green Comet Junior during their turn as part of their one action a turn to clear both players' hands.
 
-   A player may click on the Blue Comet Junior card or Green Comet Junior card even it is in the by the opoonent hand/board as long as it is their turn.
+   A player may click on the Blue Comet Junior card or Green Comet Junior card even it is in the opponent's hand/board as long as it is their turn.
 
-   The message box then shows a message to inform the players that Comet Junior has cleared both players' cards. The message is cleared from the message box automatically after 3.5 seconds.
+   The Play Area's message box then shows a message to inform the players that Comet Junior has cleared both players' cards. The message is cleared from the message box automatically after 3.5 seconds.
 
-3. **In progress, trying to solve**
+3. **Update done in separate local PC on 12 June, but not committed to Project repository**
+
+   Added message to Play Area to inform when a player clicks on a pair of cards and their card defeats the opponent card (e.g. If White Player clicks on their Megasaurus and the opponnent's Rex as a pair, a message will appear in the Play Area that informs that the White Player's Megasaurus has defeated the Black Player's Rex, White Player receives a Dino Angel)
+
+   The message is cleared from the message box automatically after 3.5 seconds.
+
+4. **Update done in separate local PC on 12th June, but not committed to Project repository**
+
+   Added colors (Purple, Coffee, White, Black) in addition to the current Red, Green, Blue, Yellow colors to increase the number of Megasaurus, Rex, Rap-Pack, and Gift cards in the deck and increase duration of the game before drawing The Comet card.
+
+   Updated CSS style to add black border to the White player's cards and white border to the Black player's cards, so that the new white color cards do not blend into the white player's board and the new black color cards do not blend into the Black player's board. Slightly reduced height of the cards after adding the border to balance out the size.
+
+5. **Update done in separate local PC on 13th June, but not commited to Project repository**
+
+   Updated Game Rules button to show updated rules after implementing the above updates.
+
+6. **In progress, trying to solve**
 
    Include "Same Dino" Cards.
-   When a player clicks on a Same Dino Cards (trying to implement as either a before or after action), it should allow the player to click on Dinos of the same Type (2 Megasauruses, or 2 Rexes, or 2 Raptor Packs) to gain a Dino Angel.
+   When a player clicks on a Same Dino Card (trying to implement as either a before or after action), it should allow the player to click on Dinos of the same Type (2 Megasauruses, or 2 Rexes, or 2 Raptor Packs) to gain a Dino Angel.
 
    This can add more strategy to allow a player to choose a Dino that they would like to remove from their hand or their opponent's hand, so that the opponent has less options to defeat the player's Dino during the opponent's turn.
-
-4. **To-do list**
-
-   Add more colors in addition to the current Red, Green, Blue, Yellow colors to increase the number of cards in the deck and increase duration of the game before drawing The Comet card.
 
 ---
 
