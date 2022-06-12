@@ -125,6 +125,8 @@ When the Comet is found to be in a player's hand when they draw for their turn, 
 
    Added colors (Purple, Coffee, White, Black) in addition to the current Red, Green, Blue, Yellow colors to increase the number of Megasaurus, Rex, Rap-Pack, and Gift cards in the deck and increase duration of the game before drawing The Comet card.
 
+   Updated Yellow cards to a different Yellow tone as the previous version was more orange in color.
+
    Updated CSS style to add black border to the White player's cards and white border to the Black player's cards, so that the new white color cards do not blend into the white player's board and the new black color cards do not blend into the Black player's board. Slightly reduced height of the cards after adding the border to balance out the size.
 
 5. **Update done in separate local PC on 13th June, but not commited to Project repository**
