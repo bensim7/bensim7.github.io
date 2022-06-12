@@ -129,7 +129,7 @@ When the Comet is found to be in a player's hand when they draw for their turn, 
 
 5. **Update done in separate local PC on 13th June, but not commited to Project repository**
 
-   Updated Game Rules button to show updated rules after implementing the above updates.
+   Updated the in-game 'Game Rules button' to show updated rules after implementing the above updates.
 
 6. **In progress, trying to solve**
 
