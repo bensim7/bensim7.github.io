@@ -95,16 +95,9 @@ HR {
   width: 100%;
 }
 
-#whiteBoard img {
+img {
   width: 150px;
-  height: 217px;
-  border: 1px solid black;
-}
-
-#blackBoard img {
-  width: 150px;
-  height: 217px;
-  border: 1px solid white;
+  height: 220px;
 }
 
 h1 {
