@@ -10,7 +10,16 @@ class Deck {
 
   reset() {
     this.deck = [];
-    const colors = ["Red", "Green", "Blue", "Yellow"];
+    const colors = [
+      "Red",
+      "Green",
+      "Blue",
+      "Yellow",
+      "Purple",
+      "Coffee",
+      "White",
+      "Black",
+    ];
     const values = ["Megasaurus", "Rex", "Rap-Pack", "Gift"];
 
     for (let color in colors) {
@@ -19,6 +28,8 @@ class Deck {
       }
     }
     this.deck.push("The_Comet");
+    this.deck.push("Blue_Comet-Junior");
+    this.deck.push("Green_Comet-Junior");
   } //End of reset()
 
   shuffle() {
@@ -92,6 +103,9 @@ class Deck {
 } //End of Deck Class
 
 const deck = new Deck();
+// deck.reset();
+// console.log("Created the deck:");
+// console.log(deck.length());
 
 function startDeal() {
   if (deck.length() < 1 || deck.deal() === "The_Comet") {
@@ -200,6 +214,7 @@ function giveWhitePlayerCard() {
   document.getElementById("whiteBoard").style.backgroundColor = "orange";
   document.getElementById("blackBoard").style.backgroundColor = "black";
 
+  clearBlackHandIfFull();
   whiteCallTheComet();
   setTimeout(checkWhiteForComet, 5000);
 }
@@ -217,6 +232,7 @@ function giveBlackPlayerCard() {
   document.getElementById("blackBoard").style.backgroundColor = "orange";
   document.getElementById("whiteBoard").style.backgroundColor = "white";
 
+  clearWhiteHandIfFull();
   blackCallTheComet();
   setTimeout(checkBlackForComet, 5000);
 }
@@ -287,6 +303,8 @@ let selectedBlack = "";
 let selectedWhiteRemoval = "";
 let selectedBlackRemoval = "";
 
+const clearMessageBox = () => (messageBox.innerHTML = "");
+
 for (let a = 1; a <= 14; a++) {
   const carddiv = document.getElementById("card" + a);
   console.log(carddiv);
@@ -309,7 +327,7 @@ for (let a = 1; a <= 14; a++) {
           carddiv.parentElement.children[c].removeAttribute("class");
           deck.deck.push("The_Comet");
           deck.shuffle();
-          messageBox.innerHTML = ""; // Clears Call The Comet
+          clearMessageBox(); // Clears Call The Comet
           document.getElementById("messageBox").removeAttribute("class");
         }
         // when Dino Angel is clicked when there is comet, it removes the comet, but also removes comet when comet is clicked.
@@ -322,6 +340,29 @@ for (let a = 1; a <= 14; a++) {
 
   // carddiv.parentElement.children[c].classList.contains("The_Comet").innerHTML = "";
   // carddiv.parentElement.children[c].classList.contains("The_Comet").removeAttribute("class");
+
+  //////////////////////////////////////////////////////////
+  // New Cards - Comet Junior - Clear Both Players Cards
+  //////////////////////////////////////////////////////////
+
+  carddiv.addEventListener("click", function (event) {
+    if (
+      event.currentTarget.className === "Blue_Comet-Junior" ||
+      event.currentTarget.className === "Green_Comet-Junior"
+    ) {
+      const cometJunior = document.createElement("h3");
+      cometJunior.innerText =
+        "--- COMET JUNIOR HAS CLEARED BOTH PLAYERS' CARDS ---";
+      messageBox.append(cometJunior);
+      // console.log("bomb elements with same");
+      // console.log(carddiv.parentElement.children);
+      for (let x = 1; x <= 14; x++) {
+        document.getElementById("card" + x).innerHTML = "";
+        document.getElementById("card" + x).removeAttribute("class");
+      }
+      setTimeout(clearMessageBox, 3500);
+    }
+  });
 
   //////////////////////////////////////////////////////////////////////////////////////////////////////
   // Compare the Cards and Determine who gets Dino Angel
@@ -394,11 +435,19 @@ for (let a = 1; a <= 14; a++) {
         (selectedWhite === "Red_Megasaurus" ||
           selectedWhite === "Green_Megasaurus" ||
           selectedWhite === "Blue_Megasaurus" ||
-          selectedWhite === "Yellow_Megasaurus") &&
+          selectedWhite === "Yellow_Megasaurus" ||
+          selectedWhite === "Purple_Megasaurus" ||
+          selectedWhite === "Coffee_Megasaurus" ||
+          selectedWhite === "White_Megasaurus" ||
+          selectedWhite === "Black_Megasaurus") &&
         (selectedBlack === "Red_Rex" ||
           selectedBlack === "Green_Rex" ||
           selectedBlack === "Blue_Rex" ||
-          selectedBlack === "Yellow_Rex")
+          selectedBlack === "Yellow_Rex" ||
+          selectedBlack === "Purple_Rex" ||
+          selectedBlack === "Coffee_Rex" ||
+          selectedBlack === "White_Rex" ||
+          selectedBlack === "Black_Rex")
       ) {
         console.log(`first if block run`);
         for (let i = 1; i <= 7; i++) {
@@ -408,20 +457,33 @@ for (let a = 1; a <= 14; a++) {
           }
         }
         removeClassAndImage();
+        const whiteMegaBlackRexMessage = document.createElement("h3");
+        whiteMegaBlackRexMessage.innerText =
+          "--- White Player's Megasaurus defeats Black Player's Rex, White Player gets a Dino Angel! ---";
+        messageBox.append(whiteMegaBlackRexMessage);
+        setTimeout(clearMessageBox, 3500);
       }
 
       // console.log(whiteHand.some(Rex));
       // console.log(blackHand.some(Rap));
 
       if (
-        (selectedWhite === "Red_Rex" ||
+        ((selectedWhite === "Red_Rex" ||
           selectedWhite === "Green_Rex" ||
           selectedWhite === "Blue_Rex" ||
-          selectedWhite === "Yellow_Rex") &&
-        (selectedBlack === "Red_Rap-Pack" ||
-          selectedBlack === "Green_Rap-Pack" ||
-          selectedBlack === "Blue_Rap-Pack" ||
-          selectedBlack === "Yellow_Rap-Pack")
+          selectedWhite === "Yellow_Rex" ||
+          selectedWhite === "Purple_Rex" ||
+          selectedWhite === "Coffee_Rex" ||
+          selectedWhite === "White_Rex") &&
+          selectedWhite === "Black_Rex") ||
+        selectedBlack === "Red_Rap-Pack" ||
+        selectedBlack === "Green_Rap-Pack" ||
+        selectedBlack === "Blue_Rap-Pack" ||
+        selectedBlack === "Yellow_Rap-Pack" ||
+        selectedBlack === "Purple_Rap-Pack" ||
+        selectedBlack === "Coffee_Rap-Pack" ||
+        selectedBlack === "White_Rap-Pack" ||
+        selectedBlack === "Black_Rap-Pack"
       ) {
         console.log(`second if block run`);
         for (let i = 1; i <= 7; i++) {
@@ -431,6 +493,11 @@ for (let a = 1; a <= 14; a++) {
           }
         }
         removeClassAndImage();
+        const whiteRexBlackRapPackMessage = document.createElement("h3");
+        whiteRexBlackRapPackMessage.innerText =
+          "--- White Player's Rex defeats Black Player's Rap-Pack, White Player gets a Dino Angel! ---";
+        messageBox.append(whiteRexBlackRapPackMessage);
+        setTimeout(clearMessageBox, 3500);
       }
 
       // console.log(whiteHand.some(Rap));
@@ -440,13 +507,21 @@ for (let a = 1; a <= 14; a++) {
         (selectedWhite === "Red_Rap-Pack" ||
           selectedWhite === "Green_Rap-Pack" ||
           selectedWhite === "Blue_Rap-Pack" ||
-          selectedWhite === "Yellow_Rap-Pack") &&
+          selectedWhite === "Yellow_Rap-Pack" ||
+          selectedWhite === "Purple_Rap-Pack" ||
+          selectedWhite === "Coffee_Rap-Pack" ||
+          selectedWhite === "White_Rap-Pack" ||
+          selectedWhite === "Black_Rap-Pack") &&
         (selectedBlack === "Red_Megasaurus" ||
           selectedBlack === "Green_Megasaurus" ||
           selectedBlack === "Blue_Megasaurus" ||
-          selectedBlack === "Yellow_Megasaurus")
+          selectedBlack === "Yellow_Megasaurus" ||
+          selectedBlack === "Purple_Megasaurus" ||
+          selectedBlack === "Coffee_Megasaurus" ||
+          selectedBlack === "White_Megasaurus" ||
+          selectedBlack === "Black_Megasaurus")
       ) {
-        console.log("third if block run");
+        console.log(`third if block run`);
         for (let i = 1; i <= 7; i++) {
           if (document.getElementById("card" + i).innerHTML == "") {
             deck.distributeAngel("card" + i, true);
@@ -454,6 +529,11 @@ for (let a = 1; a <= 14; a++) {
           }
         }
         removeClassAndImage();
+        const whiteRapPackBlackMegaMessage = document.createElement("h3");
+        whiteRapPackBlackMegaMessage.innerText =
+          "--- White Player's Rap-Pack defeats Black Player's Megasaurus, White Player gets a Dino Angel! ---";
+        messageBox.append(whiteRapPackBlackMegaMessage);
+        setTimeout(clearMessageBox, 3500);
       }
 
       // console.log(whiteHand.some(Mega));
@@ -466,11 +546,19 @@ for (let a = 1; a <= 14; a++) {
         (selectedBlack === "Red_Megasaurus" ||
           selectedBlack === "Green_Megasaurus" ||
           selectedBlack === "Blue_Megasaurus" ||
-          selectedBlack === "Yellow_Megasaurus") &&
+          selectedBlack === "Yellow_Megasaurus" ||
+          selectedBlack === "Purple_Megasaurus" ||
+          selectedBlack === "Coffee_Megasaurus" ||
+          selectedBlack === "White_Megasaurus" ||
+          selectedBlack === "Black_Megasaurus") &&
         (selectedWhite === "Red_Rex" ||
           selectedWhite === "Green_Rex" ||
           selectedWhite === "Blue_Rex" ||
-          selectedWhite === "Yellow_Rex")
+          selectedWhite === "Yellow_Rex" ||
+          selectedWhite === "Purple_Rex" ||
+          selectedWhite === "Coffee_Rex" ||
+          selectedWhite === "White_Rex" ||
+          selectedWhite === "Black_Rex")
       ) {
         for (let i = 8; i <= 14; i++) {
           if (document.getElementById("card" + i).innerHTML == "") {
@@ -479,6 +567,11 @@ for (let a = 1; a <= 14; a++) {
           }
         }
         removeClassAndImage();
+        const blackMegaWhiteRexMessage = document.createElement("h3");
+        blackMegaWhiteRexMessage.innerText =
+          "--- Black Player's Megasaurus defeats White Player's Rex, Black White gets a Dino Angel! ---";
+        messageBox.append(blackMegaWhiteRexMessage);
+        setTimeout(clearMessageBox, 3500);
       }
 
       // console.log(whiteHand.some(Rex));
@@ -488,11 +581,19 @@ for (let a = 1; a <= 14; a++) {
         (selectedBlack === "Red_Rex" ||
           selectedBlack === "Green_Rex" ||
           selectedBlack === "Blue_Rex" ||
-          selectedBlack === "Yellow_Rex") &&
+          selectedBlack === "Yellow_Rex" ||
+          selectedBlack === "Purple_Rex" ||
+          selectedBlack === "Coffee_Rex" ||
+          selectedBlack === "White_Rex" ||
+          selectedBlack === "Black_Rex") &&
         (selectedWhite === "Red_Rap-Pack" ||
           selectedWhite === "Green_Rap-Pack" ||
           selectedWhite === "Blue_Rap-Pack" ||
-          selectedWhite === "Yellow_Rap-Pack")
+          selectedWhite === "Yellow_Rap-Pack" ||
+          selectedWhite === "Purple_Rap-Pack" ||
+          selectedWhite === "Coffee_Rap-Pack" ||
+          selectedWhite === "White_Rap-Pack" ||
+          selectedWhite === "Black_Rap-Pack")
       ) {
         for (let i = 8; i <= 14; i++) {
           if (document.getElementById("card" + i).innerHTML == "") {
@@ -501,6 +602,11 @@ for (let a = 1; a <= 14; a++) {
           }
         }
         removeClassAndImage();
+        const blackRexWhiteRapPackMessage = document.createElement("h3");
+        blackRexWhiteRapPackMessage.innerText =
+          "--- Black Player's Rex defeats White Player's Rap-Pack, Black White gets a Dino Angel! ---";
+        messageBox.append(blackRexWhiteRapPackMessage);
+        setTimeout(clearMessageBox, 3500);
       }
 
       // console.log(whiteHand.some(Rap));
@@ -509,11 +615,19 @@ for (let a = 1; a <= 14; a++) {
         (selectedBlack === "Red_Rap-Pack" ||
           selectedBlack === "Green_Rap-Pack" ||
           selectedBlack === "Blue_Rap-Pack" ||
-          selectedBlack === "Yellow_Rap-Pack") &&
+          selectedBlack === "Yellow_Rap-Pack" ||
+          selectedBlack === "Purple_Rap-Pack" ||
+          selectedBlack === "Coffee_Rap-Pack" ||
+          selectedBlack === "White_Rap-Pack" ||
+          selectedBlack === "Black_Rap-Pack") &&
         (selectedWhite === "Red_Megasaurus" ||
           selectedWhite === "Green_Megasaurus" ||
           selectedWhite === "Blue_Megasaurus" ||
-          selectedWhite === "Yellow_Megasaurus")
+          selectedWhite === "Yellow_Megasaurus" ||
+          selectedWhite === "Purple_Megasaurus" ||
+          selectedWhite === "Coffee_Megasaurus" ||
+          selectedWhite === "White_Megasaurus" ||
+          selectedWhite === "Black_Megasaurus")
       ) {
         for (let i = 8; i <= 14; i++) {
           if (document.getElementById("card" + i).innerHTML == "") {
@@ -522,13 +636,22 @@ for (let a = 1; a <= 14; a++) {
           }
         }
         removeClassAndImage();
+        const blackRapPackWhiteMegaMessage = document.createElement("h3");
+        blackRapPackWhiteMegaMessage.innerText =
+          "--- Black Player's Rap-Pack defeats White Player's Megasaurus, Black White gets a Dino Angel! ---";
+        messageBox.append(blackRapPackWhiteMegaMessage);
+        setTimeout(clearMessageBox, 3500);
       }
 
       if (
         (selectedWhite === "Red_Gift" ||
           selectedWhite === "Green_Gift" ||
           selectedWhite === "Blue_Gift" ||
-          selectedWhite === "Yellow_Gift") &&
+          selectedWhite === "Yellow_Gift" ||
+          selectedWhite === "Purple_Gift" ||
+          selectedWhite === "Coffee_Gift" ||
+          selectedWhite === "White_Gift" ||
+          selectedWhite === "Black_Gift") &&
         selectedBlack === "Dino_Angel"
       ) {
         for (let i = 1; i <= 7; i++) {
@@ -538,13 +661,22 @@ for (let a = 1; a <= 14; a++) {
           }
         }
         removeClassAndImage();
+        const whiteGiftMessage = document.createElement("h3");
+        whiteGiftMessage.innerText =
+          "--- White Player uses Gift to gift themself the Black Player's Dino Angel! ---";
+        messageBox.append(whiteGiftMessage);
+        setTimeout(clearMessageBox, 3500);
       }
 
       if (
         (selectedBlack === "Red_Gift" ||
           selectedBlack === "Green_Gift" ||
           selectedBlack === "Blue_Gift" ||
-          selectedBlack === "Yellow_Gift") &&
+          selectedBlack === "Yellow_Gift" ||
+          selectedBlack === "Purple_Gift" ||
+          selectedBlack === "Coffee_Gift" ||
+          selectedBlack === "White_Gift" ||
+          selectedBlack === "Black_Gift") &&
         selectedWhite === "Dino_Angel"
       ) {
         for (let i = 8; i <= 14; i++) {
@@ -554,6 +686,11 @@ for (let a = 1; a <= 14; a++) {
           }
         }
         removeClassAndImage();
+        const blackGiftMessage = document.createElement("h3");
+        blackGiftMessage.innerText =
+          "--- Black Player uses Gift to gift themself the White Player's Dino Angel! ---";
+        messageBox.append(blackGiftMessage);
+        setTimeout(clearMessageBox, 3500);
       }
 
       console.log("End of If Else Loop for Give Dino Angel Matching Cards.");
@@ -587,6 +724,54 @@ gameRules.addEventListener("click", displayRules);
 
 function displayRules() {
   alert(
-    "Rules of the Game: \n 1. A Deck of 16 cards including 1 Comet card (Total 17 cards) is created at the start of the game. Each player receives a starting hand of 3 cards from the deck and 1 Dino Angel card outside the deck. \n\n 2. If the Comet is drawn by any Player, they lose the game unless they have A Dino Angel Card and play it within 5 seconds. \n\n 3. When Dino Angel card is clicked when the player has the comet, instead of losing the game, the Dino Angel and Comet disappear from hand and the Comet is reshuffled into the deck. \n\n 4. On each player's turn they may take up to one action. \n a) Play a pair of Dino cards (one card from each player, in top down order, click White Player's Board first and then Black Player's Board \n i) Megasaurus beats Rex beats Rap-Pack beats Megasaurus (The Player with the winning Dino out of the pair gets the Dino Angel \n ii) If a player accidentally plays a pair where the opponent has the winning Dino, they have spent the turn action to give the opponent a Dino Angel! \n b) Play a Dino Angel Card to save themself from The Comet. \n c) Clicking a Gift card and an opponent's Dino Angel card as a pair allows a player to take the opponent's Dino Angel. \n\n 5. Players with 6 or more cards in their hand should take an action."
+    "Rules of the Game: \n 1. Each player receives a starting hand of three cards from the deck and one Dino Angel card outside the deck. \n 2. If the Comet is drawn by any Player, they lose the game unless they have A Dino Angel Card and play it within 5 seconds. \n 3. When Dino Angel card is clicked when the player has the comet, instead of losing the game, the Dino Angel and Comet disappear from hand and the Comet is reshuffled into the deck. \n\n 4. On each player's turn they may take up to one action. \n a) Play a pair of Dino cards (one card from each player: click White Player's Board first and then Black Player's Board) \n i) Megasaurus beats Rex beats Rap-Pack beats Megasaurus (The Player with the winning Dino out of the pair gets the Dino Angel \n ii) If a player plays a pair where the opponent has the winning Dino, they spent the turn action to give the opponent a Dino Angel! \n b) Play a Dino Angel Card to save themself from The Comet. \n c) Clicking a Gift card and an opponent's Dino Angel card as a pair allows a player to take the opponent's Dino Angel. \n d) Any player may click on Comet Junior during their turn to clear both players' hand. \n\n 5. When a player has a 7 cards in hand when their opponent's turn starts, the player loses a random card from their hand."
   );
 }
+
+const clearWhiteHandIfFull = () => {
+  if (
+    document.getElementById("card1").innerHTML !== "" &&
+    document.getElementById("card2").innerHTML !== "" &&
+    document.getElementById("card3").innerHTML !== "" &&
+    document.getElementById("card4").innerHTML !== "" &&
+    document.getElementById("card5").innerHTML !== "" &&
+    document.getElementById("card6").innerHTML !== "" &&
+    document.getElementById("card7").innerHTML !== ""
+  ) {
+    const whiteHandFullMessage = document.createElement("h3");
+    whiteHandFullMessage.innerText =
+      "--- White Player's Hand is Full, a random card of the White Player's Hand is automatically discarded ---";
+    messageBox.append(whiteHandFullMessage);
+    document
+      .getElementById("card" + (Math.floor(Math.random() * 7) + 1))
+      .removeAttribute("class");
+    document.getElementById(
+      "card" + (Math.floor(Math.random() * 7) + 1)
+    ).innerHTML = "";
+    setTimeout(clearMessageBox, 3500);
+  }
+};
+
+const clearBlackHandIfFull = () => {
+  if (
+    document.getElementById("card8").innerHTML !== "" &&
+    document.getElementById("card9").innerHTML !== "" &&
+    document.getElementById("card10").innerHTML !== "" &&
+    document.getElementById("card11").innerHTML !== "" &&
+    document.getElementById("card12").innerHTML !== "" &&
+    document.getElementById("card13").innerHTML !== "" &&
+    document.getElementById("card14").innerHTML !== ""
+  ) {
+    const blackHandFullMessage = document.createElement("h3");
+    blackHandFullMessage.innerText =
+      "--- Black Player's Hand is Full, a random card of the Black Player's Hand is automatically discarded ---";
+    messageBox.append(blackHandFullMessage);
+    document
+      .getElementById("card" + (Math.floor(Math.random() * 7) + 1 + 7))
+      .removeAttribute("class");
+    document.getElementById(
+      "card" + (Math.floor(Math.random() * 7) + 1 + 7)
+    ).innerHTML = "";
+    setTimeout(clearMessageBox, 3500);
+  }
+};
