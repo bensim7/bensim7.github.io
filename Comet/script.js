@@ -346,23 +346,59 @@ for (let a = 1; a <= 14; a++) {
   // New Cards - Comet Junior - Clear Both Players Cards
   //////////////////////////////////////////////////////////
 
+  // carddiv.addEventListener("click", function (event) {
+  //   if (
+  //     event.currentTarget.className === "Blue_Comet-Junior" ||
+  //     event.currentTarget.className === "Green_Comet-Junior"
+  //   ) {
+  //     const cometJunior = document.createElement("h3");
+  //     cometJunior.innerText =
+  //       "--- COMET JUNIOR HAS CLEARED BOTH PLAYERS' CARDS ---";
+  //     messageBox.append(cometJunior);
+  //     // console.log("bomb elements with same");
+  //     // console.log(carddiv.parentElement.children);
+  //     for (let x = 1; x <= 14; x++) {
+  //       document.getElementById("card" + x).innerHTML = "";
+  //       document.getElementById("card" + x).removeAttribute("class");
+  //     }
+  //     setTimeout(clearMessageBox, 3500);
+  //   }
+  // });
+
   carddiv.addEventListener("click", function (event) {
     if (
       event.currentTarget.className === "Blue_Comet-Junior" ||
       event.currentTarget.className === "Green_Comet-Junior"
     ) {
+      event.currentTarget.removeAttribute("class");
+      event.currentTarget.innerHTML = "";
       const cometJunior = document.createElement("h3");
       cometJunior.innerText =
-        "--- COMET JUNIOR HAS CLEARED BOTH PLAYERS' CARDS ---";
+        "--- COMET JUNIOR RANDOMLY LANDS 3 TIMES ON ANY CARD SLOT AREA AND CLEARS CARDS WHERE IT LANDS---";
       messageBox.append(cometJunior);
-      // console.log("bomb elements with same");
-      // console.log(carddiv.parentElement.children);
-      for (let x = 1; x <= 14; x++) {
-        document.getElementById("card" + x).innerHTML = "";
-        document.getElementById("card" + x).removeAttribute("class");
-      }
-      setTimeout(clearMessageBox, 3500);
+      console.log("bomb elements with same");
+      console.log(carddiv.parentElement.childNodes);
+      document
+        .getElementById("card" + (Math.floor(Math.random() * 14) + 1))
+        .removeAttribute("class");
+      document.getElementById(
+        "card" + (Math.floor(Math.random() * 14) + 1)
+      ).innerHTML = "";
+      document
+        .getElementById("card" + (Math.floor(Math.random() * 14) + 1))
+        .removeAttribute("class");
+      document.getElementById(
+        "card" + (Math.floor(Math.random() * 14) + 1)
+      ).innerHTML = "";
+      document
+        .getElementById("card" + (Math.floor(Math.random() * 14) + 1))
+        .removeAttribute("class");
+      document.getElementById(
+        "card" + (Math.floor(Math.random() * 14) + 1)
+      ).innerHTML = "";
     }
+
+    setTimeout(clearMessageBox, 3500);
   });
 
   //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -570,7 +606,7 @@ for (let a = 1; a <= 14; a++) {
         removeClassAndImage();
         const blackMegaWhiteRexMessage = document.createElement("h3");
         blackMegaWhiteRexMessage.innerText =
-          "--- Black Player's Megasaurus defeats White Player's Rex, Black White gets a Dino Angel! ---";
+          "--- Black Player's Megasaurus defeats White Player's Rex, Black Player gets a Dino Angel! ---";
         messageBox.append(blackMegaWhiteRexMessage);
         setTimeout(clearMessageBox, 3500);
       }
@@ -605,7 +641,7 @@ for (let a = 1; a <= 14; a++) {
         removeClassAndImage();
         const blackRexWhiteRapPackMessage = document.createElement("h3");
         blackRexWhiteRapPackMessage.innerText =
-          "--- Black Player's Rex defeats White Player's Rap-Pack, Black White gets a Dino Angel! ---";
+          "--- Black Player's Rex defeats White Player's Rap-Pack, Black Player gets a Dino Angel! ---";
         messageBox.append(blackRexWhiteRapPackMessage);
         setTimeout(clearMessageBox, 3500);
       }
@@ -639,7 +675,7 @@ for (let a = 1; a <= 14; a++) {
         removeClassAndImage();
         const blackRapPackWhiteMegaMessage = document.createElement("h3");
         blackRapPackWhiteMegaMessage.innerText =
-          "--- Black Player's Rap-Pack defeats White Player's Megasaurus, Black White gets a Dino Angel! ---";
+          "--- Black Player's Rap-Pack defeats White Player's Megasaurus, Black Player gets a Dino Angel! ---";
         messageBox.append(blackRapPackWhiteMegaMessage);
         setTimeout(clearMessageBox, 3500);
       }
@@ -725,7 +761,7 @@ gameRules.addEventListener("click", displayRules);
 
 function displayRules() {
   alert(
-    "Rules of the Game: \n 1. Each player receives a starting hand of three cards from the deck and one Dino Angel card outside the deck. \n 2. If the Comet is drawn by any Player, they lose the game unless they have A Dino Angel Card and play it within 5 seconds. \n 3. When Dino Angel card is clicked when the player has the comet, instead of losing the game, the Dino Angel and Comet disappear from hand and the Comet is reshuffled into the deck. \n\n 4. On each player's turn they may take up to one action. \n a) Play a pair of Dino cards (one card from each player: click White Player's Board first and then Black Player's Board) \n i) Megasaurus beats Rex beats Rap-Pack beats Megasaurus (The Player with the winning Dino out of the pair gets the Dino Angel \n ii) If a player plays a pair where the opponent has the winning Dino, they spent the turn action to give the opponent a Dino Angel! \n b) Play a Dino Angel Card to save themself from The Comet. \n c) Clicking a Gift card and an opponent's Dino Angel card as a pair allows a player to take the opponent's Dino Angel. \n d) Any player may click on Comet Junior during their turn to clear both players' hand. \n\n 5. When a player has a 7 cards in hand when their opponent's turn starts, the player loses a random card from their hand."
+    "Rules of the Game: \n 1. Each player receives a starting hand of three cards from the deck and one Dino Angel card outside the deck. \n 2. If the Comet is drawn by any Player, they lose the game unless they have A Dino Angel Card and play it within 5 seconds. \n 3. When Dino Angel card is clicked when the player has the comet, instead of losing the game, the Dino Angel and Comet disappear from hand and the Comet is reshuffled into the deck. \n\n 4. On each player's turn they may take up to one action. \n a) Play a pair of Dino cards (one card from each player: click White Player's Board first and then Black Player's Board) \n i) Megasaurus beats Rex beats Rap-Pack beats Megasaurus (The Player with the winning Dino out of the pair gets the Dino Angel \n ii) If a player plays a pair where the opponent has the winning Dino, they spent the turn action to give the opponent a Dino Angel! \n b) Play a Dino Angel Card to save themself from The Comet. \n c) Clicking a Gift card and an opponent's Dino Angel card as a pair allows a player to take the opponent's Dino Angel. \n d) Any player may click on Comet Junior during their turn. This randomly picks any card slot to clear cards 3 times. This may be used to randomly clear The Comet if a player draws The Comet. \n\n 5. When a player has a 7 cards in hand when their opponent's turn starts, the player loses a random card from their hand."
   );
 }
 
