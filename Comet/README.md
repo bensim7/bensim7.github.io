@@ -23,7 +23,7 @@ The idea is to have both players in the game display their hands on the board an
 
    - Play a Dino Angel Card to save themself from The Comet.
    - Clicking a Gift card and an opponent's Dino Angel card as a pair allows a player to take the opponent's Dino Angel.
-   - Any player may click on Comet Junior during their turn. This randomly picks any card slot to clear cards 3 times. This may be used to randomly clear The Comet if a player draws The Comet.
+   - Any player may click on Comet Junior during their turn. This randomly picks any card slot to clear cards 3 times. If this clears The Comet, the player that drew The Comet that turn still loses as only Dino Angel can save Players from The Comet.
 
 5. Players with 6 or more cards in their hand should take an action.
 
